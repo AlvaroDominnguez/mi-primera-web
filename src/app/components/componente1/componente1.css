@@ -1,0 +1,88 @@
+.indice-acordeon { display: block; }
+
+/* Panel visual */
+.panel {
+  margin-bottom: 14px;
+  border-radius: 10px;
+  overflow: visible;
+  border: 1px solid rgba(177,0,36,0.08);
+  width: 100%;
+  background: linear-gradient(180deg, #fffaf9, #fff6f5);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+/*hover*/
+.panel:hover { transform: translateY(-3px); box-shadow: 0 18px 36px rgba(177,0,36,0.06); }
+
+/* Header*/
+.panel-header {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 14px 16px;
+  font-weight: 700;
+  color: var(--red-600);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.panel-header:focus { outline: 3px solid rgba(177,0,36,0.12); outline-offset: 4px; }
+
+/* Flecha */
+.chev { transition: transform .25s ease; transform-origin: center; color: var(--red-600); }
+.chev.open { transform: rotate(180deg); }
+
+/* Wrapper que se anima: transición en max-height */
+.panel-wrapper {
+  overflow: hidden;
+  transition: max-height 350ms cubic-bezier(.2,.8,.2,1);
+}
+
+/* Body real  */
+.panel-body {
+  padding: 14px 16px;
+  color: #333;
+  border-top: 1px solid rgba(177,0,36,0.03);
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.82));
+}
+
+/* Contenido interior */
+.panel-content p { margin: 0 0 10px 0; color: #333; 
+width: 100%;}
+
+/* Estilos de secciones (puedes personalizar) */
+.titulo-intro {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--red-700);
+  background: #fff1f1;
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 4px solid var(--red-600);
+  margin-bottom: 12px;
+}
+.cuerpo-intro { font-size: 15px; line-height: 1.6; color: #333; }
+pre {
+  background: #f6e9e9;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e4bcbc;
+  overflow-x: auto;
+  font-size: 14px;
+  margin-top: 8px;
+}
+code { font-family: Consolas, monospace; color: #7a0018; }
+
+/* Responsive */
+@media (max-width: 640px) {
+  .panel-header { padding: 12px; }
+  .panel-body { padding: 12px; }
+}
+.img-contenido {
+  width: 100%;
+  max-width: 380px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}

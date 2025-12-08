@@ -1,0 +1,24 @@
+<div class="indice-acordeon">
+  <div *ngFor="let s of sections; index as i" class="panel">
+    <button
+      class="panel-header"
+      (click)="toggle(i)"
+      [attr.aria-expanded]="s.open"
+      [attr.aria-controls]="'panel-body-' + i"
+      id="{{'panel-header-' + i}}">
+      <div class="title">{{ s.title }}</div>
+      <div class="chev" [class.open]="s.open">▾</div>
+    </button>
+
+    <!-- wrapper con transición: style.maxHeight se actualiza dinámicamente -->
+    <div
+      class="panel-wrapper"
+      [style.maxHeight]="s.open ? (s.height ? s.height + 'px' : '5000px') : '0px'"
+      [attr.aria-labelledby]="'panel-header-' + i"
+      id="{{'panel-body-' + i}}">
+      <div class="panel-body" #panelBody>
+        <div class="panel-content" [innerHTML]="s.content"></div>
+      </div>
+    </div>
+  </div>
+</div>

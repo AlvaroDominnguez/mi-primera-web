@@ -1,0 +1,103 @@
+/* src/app/app.css - layout principal */
+.main-container {
+  max-width: 1000px;
+  margin: 28px auto;
+  padding: 26px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 18px 40px rgba(22, 22, 22, 0.08);
+  border: 1px solid rgba(177,0,36,0.06);
+  overflow: hidden;
+}
+
+/* Intro */
+.intro {
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #f3d2d2;
+}
+
+.intro-titulo {
+  font-size: 28px;
+  color: var(--red-600);
+  margin: 0 0 6px 0;
+  letter-spacing: -0.4px;
+}
+
+.intro-subtitulo {
+  color: var(--muted);
+  margin: 0;
+  font-size: 14.5px;
+}
+
+.contenido {
+  gap: 22px;
+  margin-top: 18px;
+}
+
+/* Si en móvil: una columna */
+@media (max-width: 880px) {
+  .contenido { grid-template-columns: 1fr; }
+}
+
+/* Bloques interiores */
+.bloque-indice {
+  padding: 14px;
+  background: linear-gradient(180deg, #fff6f6, #fff4f4);
+  border-radius: 10px;
+  border: 1px solid #f2cfcf;
+  min-height: 160px;
+}
+
+.bloque-contenido {
+  padding: 14px;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #f0d2d2;
+  min-height: 220px;
+}
+
+.bloque-titulo {
+  font-size: 16px;
+  color: var(--red-600);
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+
+pre {
+  background: #faf4f4;
+  padding: 12px;
+  border-radius: 8px;
+  overflow: auto;
+  border: 1px solid #f3d9d9;
+  font-size: 13px;
+}
+
+/* Botones genéricos */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--red-600);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn:hover { background: var(--red-700); }
+.indice-acordeon {
+  width: 100%;
+  max-width: 900px; /* AUMENTA ESTE VALOR A TU GUSTO */
+}
+/* Contenedor general de la tarjeta blanca */
+.main-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 40px 48px 48px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 28px 60px rgba(177, 0, 36, 0.18);
+}
+
